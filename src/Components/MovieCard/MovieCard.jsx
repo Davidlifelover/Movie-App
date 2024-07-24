@@ -34,7 +34,7 @@ export default class MovieCard extends Component {
   
     const formattedDate = releaseDate ? format(new Date(releaseDate), 'MMMM d, yyyy') : null;
     const shortDesc = TrimText(description, 170);
-    const imgSrc = imgPath.startsWith('http') ? imgPath : `https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg${imgPath}`;
+    const imgSrc = imgPath.startsWith('http') ? imgPath : `https://image.tmdb.org/t/p/w500/${imgPath}`;
     const genresElement = genres.map(genreItem => (
       <li key={genreItem.id} className='genresList__item'>{genreItem.name}</li>
     )).slice(0, 3);
