@@ -62,7 +62,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "source-map-loader": "^5.0.0"
   },
   "husky": {
     "hooks": {
