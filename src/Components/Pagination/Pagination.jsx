@@ -25,5 +25,5 @@ export default function PaginationComponent({ current, total, onChange }) {
 PaginationComponent.propTypes = {
   current: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };

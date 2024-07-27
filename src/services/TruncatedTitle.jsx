@@ -30,10 +30,10 @@ export default class TruncatedTitle extends Component {
     const maxTitleLength = screenWidth <= 450 ? 25 : 35;
     const shortTitle = TrimText(title, maxTitleLength);
 
-    return <h5 className='movieTitle'>{shortTitle}</h5>;
+    return <h5 className="movieTitle">{shortTitle}</h5>;
   }
 }
 
 TruncatedTitle.propTypes = {
-  title: PropTypes.string.isRequired
-}
+  title: PropTypes.string.isRequired,
+};

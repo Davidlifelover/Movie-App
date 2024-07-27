@@ -7,7 +7,7 @@ import './SearchPanel.css';
 export default class SearchPanel extends Component {
   constructor(props) {
     super(props);
-    
+
     const { onSearch } = this.props;
     this.debouncedOnSearch = debounce(onSearch, 1000);
 
@@ -34,13 +34,13 @@ export default class SearchPanel extends Component {
   };
 
   handleSearchChange(event) {
-  const searchTerm = event.target.value;
-  this.setState({ searchTerm });
+    const searchTerm = event.target.value;
+    this.setState({ searchTerm });
 
-  if (searchTerm.trim() || searchTerm === '') {
-    this.debouncedOnSearch(searchTerm.trim());
+    if (searchTerm.trim() || searchTerm === '') {
+      this.debouncedOnSearch(searchTerm.trim());
+    }
   }
-}
 
   setActiveButton = (buttonName) => {
     this.setState({ activeButton: buttonName });
@@ -54,13 +54,15 @@ export default class SearchPanel extends Component {
           <button
             className={`search-btn ${activeButton === 'search' ? 'active' : ''}`}
             type="button"
-            onClick={() => this.handleButtonClick('search')}>
+            onClick={() => this.handleButtonClick('search')}
+          >
             Search
           </button>
           <button
             className={`rated-btn ${activeButton === 'rated' ? 'active' : ''}`}
             type="button"
-            onClick={() => this.handleButtonClick('rated')}>
+            onClick={() => this.handleButtonClick('rated')}
+          >
             Rated
           </button>
         </div>
@@ -79,5 +81,5 @@ export default class SearchPanel extends Component {
 
 SearchPanel.propTypes = {
   onSearch: PropTypes.func.isRequired,
-  onRated: PropTypes.func.isRequired
+  onRated: PropTypes.func.isRequired,
 };
